@@ -4,11 +4,11 @@ const router = express.Router();
 
 router.get('/add-product', (req, res, next) => {
   res.send(
-    '<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add product</button></form>'
+    '<form action="/admin/add-product" method="POST"><input type="text" name="title"><button type="submit">Add product</button></form>'
   ); // Sending a response is another alternative
 });
 
-router.post('/product', (req, res, next) => {
+router.post('/add-product', (req, res, next) => {
   console.log(req.body.title);
   res.redirect('/');
 });
